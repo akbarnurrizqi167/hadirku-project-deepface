@@ -1,14 +1,3 @@
-Berikut adalah versi `README.md` yang **lebih rapi, profesional, dan siap dipublikasikan di GitHub**. Sudah termasuk:
-
-* Filosofi proyek
-* Penjelasan fitur lengkap
-* Teknologi yang digunakan
-* Tutorial git clone dan setup
-* Struktur markdown bersih dan terformat baik
-
----
-
-````markdown
 # 🎓 Hadirku — Sistem Presensi Mahasiswa Berbasis Face Recognition
 
 **Hadirku** adalah sistem presensi cerdas berbasis pengenalan wajah (face recognition) yang dirancang untuk lingkungan akademik. Dengan teknologi ini, proses presensi menjadi lebih cepat, akurat, dan aman — menggantikan metode konvensional yang rawan manipulasi dan ketidakefisienan.
@@ -55,7 +44,6 @@ Absensi manual sering kali menghadapi kendala seperti pemalsuan kehadiran, antri
   - Melakukan analisis dan monitoring kehadiran
 - **Logout** untuk keluar dari sistem.
 
----
 
 ## 🧠 Teknologi Face Recognition
 
