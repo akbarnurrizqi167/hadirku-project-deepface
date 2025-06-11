@@ -1,4 +1,4 @@
-# 🎓 Hadirku — Sistem Presensi Mahasiswa Berbasis Face Recognition
+# 🎓 **Hadirku** — Sistem Presensi Mahasiswa Berbasis Face Recognition
 
 **Hadirku** adalah sistem presensi cerdas berbasis pengenalan wajah (face recognition) yang dirancang untuk lingkungan akademik. Dengan teknologi ini, proses presensi menjadi lebih cepat, akurat, dan aman menggantikan metode konvensional yang rawan manipulasi dan ketidakefisienan.
 
@@ -91,7 +91,7 @@ pip install -r requirements.txt
 ```bash
 python create_admin.py
 ```
-"Ikuti prompt untuk memasukkan username dan password admin"
+> "Ikuti prompt untuk memasukkan username dan password admin"
 
 ### 5. Inisialisasi Database
 
@@ -158,9 +158,3 @@ Proyek ini dilisensikan di bawah [MIT License](LICENSE).
 **Akbar Nur Rizqi**
 📧 [akbarnurrizqi167@gmail.com](mailto:akbarnurrizqi167@gmail.com)
 🌐 GitHub: [github.com/akbarnurrizqi167](https://github.com/akbarnurrizqi167)
-
----
-
-> “Presensi bukan hanya soal hadir, tapi bagaimana kita diakui dengan cerdas.”
-
-```
