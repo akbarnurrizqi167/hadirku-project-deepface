@@ -1,6 +1,6 @@
 # 🎓 Hadirku — Sistem Presensi Mahasiswa Berbasis Face Recognition
 
-**Hadirku** adalah sistem presensi cerdas berbasis pengenalan wajah (face recognition) yang dirancang untuk lingkungan akademik. Dengan teknologi ini, proses presensi menjadi lebih cepat, akurat, dan aman — menggantikan metode konvensional yang rawan manipulasi dan ketidakefisienan.
+**Hadirku** adalah sistem presensi cerdas berbasis pengenalan wajah (face recognition) yang dirancang untuk lingkungan akademik. Dengan teknologi ini, proses presensi menjadi lebih cepat, akurat, dan aman menggantikan metode konvensional yang rawan manipulasi dan ketidakefisienan.
 
 ---
 
@@ -49,11 +49,6 @@ Absensi manual sering kali menghadapi kendala seperti pemalsuan kehadiran, antri
 
 Sistem menggunakan DeepFace dan model `SFace` untuk menghasilkan *embedding wajah*, lalu membandingkannya menggunakan **cosine similarity**:
 
-```python
-from deepface import DeepFace
-from sklearn.metrics.pairwise import cosine_similarity
-````
-
 Prosesnya:
 
 1. Tangkap wajah dari webcam.
@@ -96,7 +91,7 @@ pip install -r requirements.txt
 ```bash
 python create_admin.py
 ```
-Ikuti prompt untuk memasukkan username dan password admin
+"Ikuti prompt untuk memasukkan username dan password admin"
 
 ### 5. Inisialisasi Database
 
@@ -168,11 +163,4 @@ Proyek ini dilisensikan di bawah [MIT License](LICENSE).
 
 > “Presensi bukan hanya soal hadir, tapi bagaimana kita diakui dengan cerdas.”
 
-```
-
----
-
-### ✅ Langkah Selanjutnya
-
-Jika kamu belum punya `requirements.txt`, saya bisa bantu buatkan berdasarkan kode yang kamu lampirkan. Ingin saya bantu buatkan juga?
 ```
