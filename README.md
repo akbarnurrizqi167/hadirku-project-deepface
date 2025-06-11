@@ -71,14 +71,17 @@ Ikuti langkah-langkah berikut di terminal atau command prompt:
 
 ```bash
 git clone https://github.com/akbarnurrizqi167/hadirku-project.git
+```
+```bash
 cd hadirku-project
 ```
 
 ### 2. Aktifkan Virtual Environment (Opsional, tapi Disarankan)
 
 ```bash
-# Windows
 python -m venv venv
+```
+```bash
 venv\Scripts\activate
 ```
 
@@ -92,8 +95,8 @@ pip install -r requirements.txt
 
 ```bash
 python create_admin.py
-# Ikuti prompt untuk memasukkan username dan password admin
 ```
+Ikuti prompt untuk memasukkan username dan password admin
 
 ### 5. Inisialisasi Database
 
