@@ -1,0 +1,79 @@
+{% extends "base.html" %} {% block title %}Daftarkan Wajah{% endblock %} {% block content %}
+<div class="text-center">
+    <h2>Daftarkan Wajah Anda, {{ current_user.name }}</h2>
+    <p>Posisikan wajah Anda dengan pencahayaan yang baik di dalam area kamera, lalu klik tombol "Ambil & Simpan Foto".</p>
+
+    <div class="camera-container mx-auto my-4">
+        <video id="video" width="640" height="480" autoplay playsinline></video>
+        <canvas id="canvas" width="640" height="480" style="display:none;"></canvas>
+    </div>
+
+    <button id="capture-btn" class="btn btn-success btn-lg">
+        Ambil & Simpan Foto
+    </button>
+</div>
+{% endblock %} {% block scripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const video = document.getElementById('video');
+        const canvas = document.getElementById('canvas');
+        const captureBtn = document.getElementById('capture-btn');
+        const context = canvas.getContext('2d');
+
+        // Akses webcam
+        navigator.mediaDevices.getUserMedia({
+                video: true
+            })
+            .then(stream => {
+                video.srcObject = stream;
+            })
+            .catch(err => {
+                console.error("Error accessing webcam: ", err);
+                Swal.fire('Error', 'Tidak dapat mengakses kamera.', 'error');
+            });
+
+        captureBtn.addEventListener('click', function() {
+            // Tampilkan loading
+            Swal.fire({
+                title: 'Menyimpan...',
+                text: 'Foto Anda sedang diproses dan disimpan.',
+                allowOutsideClick: false,
+                didOpen: () => {
+                    Swal.showLoading();
+                }
+            });
+
+            // Ambil gambar dari video
+            context.drawImage(video, 0, 0, canvas.width, canvas.height);
+            const imageData = canvas.toDataURL('image/jpeg');
+
+            // Kirim data ke server
+            fetch('/save_face', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        image_data: imageData
+                    }),
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === 'success') {
+                        Swal.fire('Berhasil!', data.message, 'success')
+                            .then(() => {
+                                // Arahkan ke halaman utama setelah berhasil
+                                window.location.href = '/';
+                            });
+                    } else {
+                        Swal.fire('Gagal!', data.message, 'error');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    Swal.fire('Error', 'Terjadi kesalahan saat mengirim data.', 'error');
+                });
+        });
+    });
+</script>
+{% endblock %}
