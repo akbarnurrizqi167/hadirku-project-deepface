@@ -47,7 +47,7 @@ Absensi manual sering kali menghadapi kendala seperti pemalsuan kehadiran, antri
 
 ## 🧠 Teknologi Face Recognition
 
-Sistem menggunakan DeepFace dan model `SFace` untuk menghasilkan *embedding wajah*, lalu membandingkannya menggunakan **cosine similarity**:
+Sistem ini menggunakan `DeepFace ` untuk mengekstraksi fitur wajah (disebut embedding) dari gambar yang diambil melalui webcam. Prosesnya melibatkan: Ekstraksi embedding wajah dari gambar secara real-time menggunakan model `SFace` dan detektor `OpenCV` atau `MTCNN`. Embedding tersebut dibandingkan dengan data embedding wajah yang tersimpan di database menggunakan **cosine similarity**. Jika nilai similarity di atas ambang batas (0.55), maka wajah dikenali sebagai pengguna yang cocok. Seluruh data embedding disimpan dalam bentuk biner menggunakan `pickle`, dan dicocokkan saat presensi dilakukan untuk memastikan autentikasi berbasis wajah secara cepat dan aman.
 
 Prosesnya:
 
