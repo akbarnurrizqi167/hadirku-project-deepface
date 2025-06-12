@@ -1,5 +1,8 @@
 from app import create_app, db
 from models import MataKuliah
+import tensorflow as tf
+tf.get_logger().setLevel('ERROR')
+
 
 app = create_app()
 
