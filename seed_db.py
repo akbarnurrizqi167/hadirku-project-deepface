@@ -1,7 +1,7 @@
 from app import create_app, db
 from models import MataKuliah
-import tensorflow as tf
-tf.get_logger().setLevel('ERROR')
+import os
+os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
 
 app = create_app()
 
