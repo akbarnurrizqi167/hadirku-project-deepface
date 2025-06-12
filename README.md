@@ -71,35 +71,26 @@ git clone https://github.com/akbarnurrizqi167/hadirku-project.git
 cd hadirku-project
 ```
 
-### 2. Aktifkan Virtual Environment (Opsional, tapi Disarankan)
-
-```bash
-python -m venv venv
-```
-```bash
-venv\Scripts\activate
-```
-
-### 3. Install Dependencies
+### 2. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. Buat Akun Admin
+### 3. Buat Akun Admin
 
 ```bash
 python create_admin.py
 ```
 > "Ikuti prompt untuk memasukkan username dan password admin"
 
-### 5. Inisialisasi Database
+### 4. Inisialisasi Database
 
 ```bash
 python seed_db.py
 ```
 
-### 6. Jalankan Aplikasi
+### 5. Jalankan Aplikasi
 
 ```bash
 flask run
