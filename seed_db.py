@@ -3,7 +3,6 @@ from models import MataKuliah
 import tensorflow as tf
 tf.get_logger().setLevel('ERROR')
 
-
 app = create_app()
 
 with app.app_context():
