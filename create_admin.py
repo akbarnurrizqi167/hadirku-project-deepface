@@ -2,8 +2,8 @@ from app import create_app, db
 from models import User
 from werkzeug.security import generate_password_hash
 import getpass
-import tensorflow as tf
-tf.get_logger().setLevel('ERROR')
+import os
+os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
 
 def create_admin_user():
     """
