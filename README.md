@@ -73,6 +73,7 @@ cd hadirku-project
 
 ### 2. Install Dependencies
 
+> "Disarankan menggunakan python versi 3.10 atau dibawahnya"
 ```bash
 pip install -r requirements.txt
 ```
