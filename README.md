@@ -65,7 +65,7 @@ Ikuti langkah-langkah berikut di terminal atau command prompt:
 ### 1. Clone Repository
 
 ```bash
-git clone https://github.com/akbarnurrizqi167/hadirku-project.git
+git clone https://github.com/akbarnurrizqi167/hadirku-project-deepface
 ```
 ```bash
 cd hadirku-project
